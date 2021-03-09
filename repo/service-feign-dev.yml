@@ -1,0 +1,14 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8080/eureka/
+server:
+  port: 8085
+spring:
+  application:
+    name: service-feign
+  main:
+      allow-bean-definition-overriding: true #允许存在多个FeignClient注解
+feign:
+  hystrix:
+    enabled: true #打开feign自带的断路器功能

@@ -1,0 +1,19 @@
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8080/eureka/
+server:
+  port: 8086
+spring:
+  application:
+    name: service-zuul
+
+zuul:
+  routes:
+    api-a:
+      path: /api-a/**   #你的请求中所有已api-a开头请求都会走此path
+      serviceId: service-ribbon  #api-a开头请求都会走此path转发到service-ribbon服务上  注意此服务的名称为注册中心中定义的名
+    api-b:
+      path: /api-b/** #你的请求中所有已api-b开头请求都会走此path
+      serviceId: service-feign #api-a开头请求都会走此path转发到service-feign服务上  注意此服务的名称为注册中心中定义的名（spring.application.name设置的名称）
