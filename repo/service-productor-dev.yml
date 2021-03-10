@@ -24,7 +24,7 @@ spring:
     url: jdbc:mysql://localhost:3306/java126?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC
     username: root
   application:
-    name: service-productor  #这是在注册中心显示的名字  很重要
+    name: service-productor111  #这是在注册中心显示的名字  很重要
 
 eureka:
   client:
